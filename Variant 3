@@ -1,0 +1,25 @@
+public class ReverseWords {
+    public static String reverseWords(String input) {
+        // Разделение строки на слова
+        String[] words = input.split(" ");
+
+        // Создание новой строки с обратным порядком слов
+        StringBuilder reversed = new StringBuilder();
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed.append(words[i]).append(" ");
+        }
+
+        // Удаление последнего лишнего пробела
+        return reversed.toString().trim();
+    }
+
+    public static void main(String[] args) {
+        // Пример использования
+        String inputString = "Пример строки для обратного порядка слов";
+        String reversedString = reverseWords(inputString);
+
+        // Вывод результата
+        System.out.println("Исходная строка: " + inputString);
+        System.out.println("Строка с обратным порядком слов: " + reversedString);
+    }
+}
